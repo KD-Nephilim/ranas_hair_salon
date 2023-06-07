@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --bg1: #151828;
+    --bg2: #1B1F34;
+    --body: #959DCC;
+    --brand: #FFAB76;
+    --white: #fff;
+}
+
+body{
+    font-family: "Inter", 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--white) ; /* this will be the defalt colour of the paragraphes*/
+    line-height: 1.8;
+    background-color: var(--body);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Dela Gothic One", 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--white); /*This is the defalt colour of the headings*/
+}
+
+a {                 /*This is fro the link 'Known More'*/
+    color: var(--bg2); /*This is for the set colour it will have*/
+    text-decoration: none; /* this is to remove the underline it had*/
+}
+
+a:hover {           /*this is for when the arrow hovers over the "Know More' link*/  
+    color: var(--brand); /*this is to change the colour of the link when it hovers over it*/
+}
+
+.link-more {        /*this is foe the fort size, spacing, position of the link*/
+    display: inline-flex; /*this code allows the text to move proposhinatly to the size of the windo*/
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase; /* Makrs all the lettors of the link capital*/
+    letter-spacing: 1px;
+}
+
+.link-more .icon {
+    transition: all 0.4s ease; /*this code tells the icon how fasr it must move when it is hoverd over*/
+}
+
+.link-more:hover .icon {
+    transform: translateX(8px); /*this moves the arrow icon 8 pixils on the X axis when the arrow hovers over the link*/
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+/*INTRO TO SERVICE SECTION*/
+.intro {
+    margin-bottom: 60px; /*this is the distance from the bottom of the paragraph of 'What we provide?' to the images*/
+}
+
+.intro h1 {         /*this is the 'What we provide?' heading*/
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+ 
+.intro h6 {         /*this is the 'Services we offer' heading*/
+    color: var(--brand);
+}
+
+.intro p {          /*this is for the paragraph under 'What we provide?'*/
+    max-width: 500px; /*this makes the paragraph use the format 'Center'*/
+    margin: auto; /*this centurs the text in the middle of the page*/
+}
+
+.cta-btns {
+    margin-top: 30px;
+}
+
+/* NAVBAR */
+.navbar{
+    background: linear-gradient(to bottom,#959DCC,rgba(149, 158, 203, 0.85));
+}
+
+.navbar .navbar-nav .nav-link.active {
+    color: var(--brand); /* this is for the colour of the navigation bar when you click on it and it will change colour */
+}
+
+.navbar-brand{
+    font-family: "Dela Gothic One", 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* this is for the type of font/text */
+    font-size: 32px;
+}
+
+
+/* HERO */
+#hero{
+    background: linear-gradient(to right,#959DCC,rgba(149, 157, 204, 0)), url(../img/cover_1.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#hero p{
+    margin-top: 24px; /* this is for the spacing between the heading and the paragraph */
+    margin-bottom: 24px; /* this is for the spacing between the paragraph and whatever is bellow it */
+}
+
+/* BUTTON */
+.btn {
+    padding: 16px 36px;
+    font-family: "Dela Gothic One", 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.4s ease;
+    border-radius: 0;
+}
+
+.btn-brand {
+    background-color: var(--brand);
+
+}
+
+.btn-brand:hover {
+    background-color: transparent;
+    color: var(--brand);
+    border-color: var(--brand);
+
+}
+
+.btn-outline-brand {
+    background-color: transparent;
+    color: var(--bg1);
+    border-color: var(--brand);
+}
+
+.btn-outline-brand:hover {
+    background-color: var(--brand);
+}
+
+
+/* ABOUT */
+#about{
+    position: relative;
+}
+
+#about .signature {
+    width: unset;
+}
+
+#about h1 {
+    margin-top: 16px; /* this will put space between the 'About us' heading and the 'About Rana's Hair Salon' heading*/
+    margin-bottom: 24px; /* this will put space between the 'About Rana's Hair Salon' heading and the paragraph*/
+}
+
+#about h6 {
+    color: var(--brand); /*this is to change the colour of the 'About us' heading*/
+    margin-top: 24px; /* this will put space between the image and the 'About us' heading */
+}
+
+#about::after{
+    content: "";
+    width: 25%;
+    height: 100%;
+    background-color: var(--bg2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* this code makes the colour to the left go behind the picture and words*/
+}
+
+/* SERVICES */
+#services {
+    background: #8291dc; /*this sets the colour of the services section*/
+}
+
+#services .service .content {
+    padding: 32px;
+}
+
+#services .service p{
+    margin-top: 18px;
+    margin-bottom: 16px;
+}
+
+/*MILESTONE*/
+#milestone {
+    background: linear-gradient(to right,rgba(149, 157, 204, 0.6),rgba(149, 157, 204, 0.2)), url(../img/cover_2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#milestone h1 {
+    color: var(--brand);
+}
+
+/*PRICING*/
+#pricing {
+    background-color: #8291dc;
+}
+
+/*PRICES*/
+.prices {
+    display: flex;
+}
+
+.prices .icon-prices {
+    font-size: 34px;
+    color: var(--brand);
+    line-height: 1;
+    margin-right: 16px;
+}
+
+.prices p {
+    font-size: 14px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* REVIEWS*/
+#reviews {
+    background-color: var(--body);
+}
+
+.review {
+    padding: 32px;
+    background-color: var(--bg2);
+    position: relative;
+}
+
+.review .icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--brand);
+    color: var(--body);
+    border-radius: 100px;
+    position: absolute;
+    right: 32px;
+}
+
+.review img {
+    width: 60px;
+    border-radius: 100px;
+}
+
+/*BLOG POST*/
+#blog {
+    background-color: #8291dc;
+}
+
+.blog-post {
+    position: relative;
+}
+
+.blog-post .date {
+    width: 100px;
+    height: 100px;
+    background-color: var(--brand);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.blog-post .day {
+    font-size: 32px;
+    line-height: 1;
+    font-family:"Dela Gothic One", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    color: var(--bg2);
+}
+
+.blog-post .year {
+    color: var(--bg2);
+}
+
+/*BOOKING*/
+#booking {
+    background: linear-gradient(to right,rgba(149, 157, 204, 0.4),rgba(149, 157, 204, 0.2)), url(../img/booking_page.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#booking form {
+    background-color: #8291dc;
+    padding: 32px;
+}
+
+#booking form .form-control {
+    background-color: var(--body);
+    border-radius: 0;
+    margin-top: 16px;
+    border-color: #8291dc;
+    border: 2px solid #8291dc;
+    color: var(--bg2);
+}
+
+#booking form input {
+    height: 58px;
+}
+
+#booking form .form-control:focus {
+    box-shadow: none;
+    border-left-color: var(--brand);
+}
+
+/*FOOTER*/
+footer {
+    padding-top: 160px;
+    background-color: #8291dc;
+}
+
+.footter-top {
+    padding-bottom: 30px;
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid var(--body);
+}
+
+.scroll-link {
+  scroll-behavior: smooth;
+  transition: scroll-behavior 250ms ease-in-out;
+}
